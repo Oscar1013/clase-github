@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+
+body{   
+    color: #ffffff;
+    
+}
+
+.contenedor{  
+    /*max-width: 1000px;*/
+    width: 100%;
+    margin: 5px auto;
+    display: grid;
+    gap: 2px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "header header header header"
+                         "contenido contenido contenido contenido"
+                         "sidebar sidebar sidebar sidebar"
+                         "widget-1 widget-1 widget-2 widget-2 "
+                         "footer footer footer footer";
+}
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer{
+    background: #000000dc;
+    padding: 10px;
+}
+/*header*/
+.contenedor .header{
+    grid-area: header;
+}
+
+.contenedor .header .menu ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor .header .menu ul li{
+    padding: 20px;
+    color: #ffffff;
+    font-size: 1.9vw;
+}
+
+.contenedor .header .menu ul li a{
+    color: #fff;
+}
+
+.contenedor .header .menu ul li a:hover{
+    zoom: 120%;
+    border-bottom: 2px solid #fff;
+}
+
+
+/*header*/
+
+/*main*/
+.contenedor .contenido{
+    grid-area: contenido;
+    font-size: 1.3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+.contenedor .contenido .video{
+    position: relative;
+    /*width="560" height="315"*/
+    width: 550;
+    height: 315;
+    text-align: center;
+    border-radius: 5%;
+    border: 2px solid;
+    border-color: #000;
+
+
+}
+/*main*/
+
+/*sidebar*/
+.contenedor .sidebar{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    grid-area: sidebar;
+}
+/*sidebar*/
+
+.contenedor .widget-1,
+.contenedor .widget-2 {
+    /*height: 100px;*/
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.contenedor .widget-1{
+    grid-area: widget-1;
+}
+
+.contenedor .widget-2{
+    grid-area: widget-2;
+}
+
+.contenedor .footer{
+   grid-area: footer;
+
+}
+
+@media screen and (max-width: 768px){
+    .contenedor{
+        grid-template-areas: "header header header header"
+                            "contenido contenido contenido contenido"
+                            "sidebar sidebar sidebar sidebar"
+                            "widget-1 widget-1 widget-2 widget-2 "
+                            "footer footer footer footer";   
+    }
+
+
+
+  
+
+
+
+    .contenedor .contenido{
+        font-size: 1.47vw;      
+    }
+
+    .contenedor .contenido .video{
+        width: 275;
+        height: 175;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5%;
+    }
+
+
+
+    
+}
+
+
